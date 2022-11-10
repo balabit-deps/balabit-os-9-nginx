@@ -1,3 +1,13 @@
+nginx (1.18.0-6ubuntu14.3) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: memory corruption/disclosure issue
+    - debian/patches/CVE-2022-41741_41742.patch: disabled duplicate atoms in
+      Mp4
+    - CVE-2022-41741
+    - CVE-2022-41742
+
+ -- Nishit Majithia <nishit.majithia@canonical.com>  Thu, 10 Nov 2022 12:09:42 +0530
+
 nginx (1.18.0-6ubuntu14.2) jammy; urgency=medium
 
   * d/p/ssl-op-ignore-unexpected-eof-option.patch: Add compatibility

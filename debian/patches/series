@@ -7,3 +7,4 @@ CVE-2021-23017-1.patch
 CVE-2021-23017-2.patch
 CVE-2021-3618.patch
 ssl-op-ignore-unexpected-eof-option.patch
+CVE-2022-41741_41742.patch
