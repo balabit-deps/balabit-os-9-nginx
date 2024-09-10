@@ -9,3 +9,5 @@ CVE-2021-3618.patch
 ssl-op-ignore-unexpected-eof-option.patch
 CVE-2022-41741_41742.patch
 lp1957320-jammy-fixed-sigquit-issue-with-unix-sockets.patch
+CVE-2024-7347-1.patch
+CVE-2024-7347-2.patch
