@@ -1,3 +1,15 @@
+nginx (1.18.0-6ubuntu14.6) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: null pointer dereference in nginx-rtmp-module.
+    - debian/modules/rtmp/ngx_rtmp_amf.c patched with upstream
+      commits.
+  * SECURITY UPDATE: buffer overrun in nginx-rtmp-module
+    - debian/modules/rtmp/ngx_rtmp_handler.c patched with upstream
+      commits.
+  * Closes LP: #1977718
+
+ -- Thomas Ward <teward@ubuntu.com>  Fri, 14 Feb 2025 13:40:46 -0500
+
 nginx (1.18.0-6ubuntu14.5) jammy-security; urgency=medium
 
   * SECURITY UPDATE: DoS in ngx_http_mp4_module
