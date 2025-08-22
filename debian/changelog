@@ -1,3 +1,12 @@
+nginx (1.18.0-6ubuntu14.7) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: data leak in ngx_mail_smtp_module
+    - debian/patches/CVE-2025-53859.patch: properly check lengths in
+      src/mail/ngx_mail_handler.c.
+    - CVE-2025-53859
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Fri, 22 Aug 2025 08:46:32 -0400
+
 nginx (1.18.0-6ubuntu14.6) jammy-security; urgency=medium
 
   * SECURITY UPDATE: null pointer dereference in nginx-rtmp-module.

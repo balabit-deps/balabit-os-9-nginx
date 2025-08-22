@@ -11,3 +11,4 @@ CVE-2022-41741_41742.patch
 lp1957320-jammy-fixed-sigquit-issue-with-unix-sockets.patch
 CVE-2024-7347-1.patch
 CVE-2024-7347-2.patch
+CVE-2025-53859.patch
