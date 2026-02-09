@@ -1,3 +1,12 @@
+nginx (1.18.0-6ubuntu14.8) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: Proxy server response plain text injection
+    - debian/patches/CVE-2026-1642.patch: detect premature plain text
+      response from SSL backend in src/http/ngx_http_upstream.c.
+    - CVE-2026-1642
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 09 Feb 2026 09:09:38 -0500
+
 nginx (1.18.0-6ubuntu14.7) jammy-security; urgency=medium
 
   * SECURITY UPDATE: data leak in ngx_mail_smtp_module
