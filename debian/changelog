@@ -1,3 +1,29 @@
+nginx (1.18.0-6ubuntu14.10) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: process crash in ngx_mail_auth_http_module
+    - debian/patches/CVE-2026-27651.patch: fixed clearing s->passwd in auth
+      http requests in src/mail/ngx_mail_auth_http_module.c.
+    - CVE-2026-27651
+  * SECURITY UPDATE: buffer overflow in ngx_http_dav_module module
+    - debian/patches/CVE-2026-27654.patch: add destination length
+      validation for COPY and MOVE in
+      src/http/modules/ngx_http_dav_module.c.
+    - CVE-2026-27654
+  * SECURITY UPDATE: buffer overflow in ngx_http_mp4_module module
+    - debian/patches/CVE-2026-27784.patch: fixed possible integer overflow
+      on 32-bit platforms in src/http/modules/ngx_http_mp4_module.c.
+    - CVE-2026-27784
+  * SECURITY UPDATE: header injection in ngx_mail_smtp_module module
+    - debian/patches/CVE-2026-28753.patch: add  host validation in
+      src/mail/ngx_mail_smtp_handler.c.
+    - CVE-2026-28753
+  * SECURITY UPDATE: buffer overflow in ngx_http_mp4_module module
+    - debian/patches/CVE-2026-32647.patch: avoid zero size buffers in
+      output in src/http/modules/ngx_http_mp4_module.c.
+    - CVE-2026-32647
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 23 Apr 2026 08:28:46 -0400
+
 nginx (1.18.0-6ubuntu14.8) jammy-security; urgency=medium
 
   * SECURITY UPDATE: Proxy server response plain text injection
