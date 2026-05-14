@@ -1,3 +1,14 @@
+nginx (1.18.0-6ubuntu14.11) jammy-security; urgency=medium
+
+  [ Thomas Ward ]
+  * SECURITY UPDATE: buffer overrun in ngx_http_rewrite_module
+    (LP: #2152577)
+    - d/patches/cve-2026-42945.patch: Apply upstream commit/fix
+      for CVE
+    - CVE-2026-42945
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 14 May 2026 09:55:52 +0200
+
 nginx (1.18.0-6ubuntu14.10) jammy-security; urgency=medium
 
   * SECURITY UPDATE: process crash in ngx_mail_auth_http_module
