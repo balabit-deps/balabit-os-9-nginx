@@ -1,3 +1,30 @@
+nginx (1.18.0-6ubuntu14.12) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: resolver use-after-free in OCSP
+    - debian/patches/CVE-2026-40701.patch: OCSP: resolve cleanup on connection
+      close in src/event/ngx_event_openssl_stapling.c.
+    - CVE-2026-40701
+  * SECURITY UPDATE: Buffer overread in the ngx_http_charset_module
+    - debian/patches/CVE-2026-42934.patch: Charset: fix buffer over-read in
+      recode_from_utf8(). in src/http/modules/ngx_http_charset_filter_module.c.
+    - CVE-2026-42934
+  * SECURITY UPDATE: Buffer overread in the ngx_http_scgi_module and
+    ngx_http_uwsgi_module
+    - debian/patches/CVE-2026-42946-1.patch: Upstream: reset parsing state after
+      invalid status line in src/http/modules/ngx_http_scgi_module.c,
+      src/http/modules/ngx_http_uwsgi_module.c.
+    - debian/patches/CVE-2026-42946-2.patch: Upstream: fixed parsing of split
+      status lines in src/http/modules/ngx_http_proxy_module.c,
+      src/http/modules/ngx_http_scgi_module.c,
+      src/http/modules/ngx_http_uwsgi_module.c.
+    - CVE-2026-42946
+  * SECURITY UPDATE: Buffer overflow in the ngx_http_rewrite_module
+    - debian/patches/CVE-2026-9256.patch: Rewrite: fix buffer overflow with
+      overlapping captures in src/http/ngx_http_script.c.
+    - CVE-2026-9256
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Sat, 30 May 2026 10:32:05 -0400
+
 nginx (1.18.0-6ubuntu14.11) jammy-security; urgency=medium
 
   [ Thomas Ward ]
