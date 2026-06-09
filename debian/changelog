@@ -1,3 +1,22 @@
+nginx (1.18.0-6ubuntu14.14) jammy-security; urgency=medium
+
+  * SECURITY REGRESSION: ABI change breaking external modules (LP: #2155992)
+    - debian/patches/CVE-2026-49975.patch: disable for now, pending further
+      investigation.
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 09 Jun 2026 07:45:51 -0400
+
+nginx (1.18.0-6ubuntu14.13) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: HTTP/2 Bomb denial of service
+    - debian/patches/CVE-2026-49975.patch: Added max_headers directive. in
+      src/http/ngx_http_core_module.c, src/http/ngx_http_core_module.h,
+      src/http/ngx_http_request.c, src/http/ngx_http_request.h,
+      src/http/v2/ngx_http_v2.c.
+    - CVE-2026-49975
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Fri, 05 Jun 2026 07:38:10 -0400
+
 nginx (1.18.0-6ubuntu14.12) jammy-security; urgency=medium
 
   * SECURITY UPDATE: resolver use-after-free in OCSP
