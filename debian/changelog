@@ -1,3 +1,14 @@
+nginx (1.18.0-6ubuntu14.15) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: HTTP/2 Bomb denial of service
+    - debian/patches/CVE-2026-49975.patch: updated to patch from Debian's
+      1.26.3-3+deb13u6 package which was modified to not break ABI by
+      storing the information in a new ngx_http_header_count_module module.
+      Thanks to Miao Wang and Jan Mojžíš for the modified patch!
+    - CVE-2026-49975
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 10 Jun 2026 16:12:55 -0400
+
 nginx (1.18.0-6ubuntu14.14) jammy-security; urgency=medium
 
   * SECURITY REGRESSION: ABI change breaking external modules (LP: #2155992)
