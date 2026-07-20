@@ -1,3 +1,45 @@
+nginx (1.18.0-6ubuntu14.18) jammy-security; urgency=medium
+
+  * SECURITY REGRESSION: Security fix may break ABI (LP: #2161362)
+    - debian/patches/CVE-2026-42533-*.patch: Disabled for now.
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 20 Jul 2026 15:12:42 -0400
+
+nginx (1.18.0-6ubuntu14.17) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: DoS and possible code execution via map directive
+    - debian/patches/CVE-2026-42533-pre1.patch: Script: simplified copy capture
+      codes. in src/http/ngx_http_script.c, src/stream/ngx_stream_script.c.
+    - debian/patches/CVE-2026-42533-1.patch: Script: buffer overrun protection.
+      in src/http/ngx_http_script.c, src/http/ngx_http_script.h,
+      src/stream/ngx_stream_script.c, src/stream/ngx_stream_script.h.
+    - debian/patches/CVE-2026-42533-2.patch: Script: buffer overrun protection
+      in direct script usage. in src/http/modules/ngx_http_fastcgi_module.c,
+      src/http/modules/ngx_http_grpc_module.c,
+      src/http/modules/ngx_http_index_module.c,
+      src/http/modules/ngx_http_proxy_module.c,
+      src/http/modules/ngx_http_scgi_module.c,
+      src/http/modules/ngx_http_try_files_module.c,
+      src/http/modules/ngx_http_uwsgi_module.c.
+    - debian/patches/CVE-2026-42533-3.patch: Script: avoid garbage at the end of
+      the result string in src/http/modules/ngx_http_rewrite_module.c,
+      src/http/ngx_http_script.c, src/http/ngx_http_script.h,
+      src/stream/ngx_stream_script.c.
+    - debian/patches/CVE-2026-42533-4.patch: Access log: buffer overrun
+      protection. in src/http/modules/ngx_http_log_module.c,
+      src/stream/ngx_stream_log_module.c.
+    - CVE-2026-42533
+  * SECURITY UPDATE: use-after-free in ngx_http_ssi_module module
+    - debian/patches/CVE-2026-56434.patch: Avoid duplicate subrequest
+      finalization in src/http/ngx_http_request.c.
+    - CVE-2026-56434
+  * SECURITY UPDATE: uninitialized memory access in ngx_http_slice_module
+    - debian/patches/CVE-2026-60005.patch: Fixed uninitialized memory read
+      caused by stale regex captures. in src/http/ngx_http_variables.c.
+    - CVE-2026-60005
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 16 Jul 2026 09:14:55 -0400
+
 nginx (1.18.0-6ubuntu14.16) jammy-security; urgency=medium
 
   * SECURITY UPDATE: heap overflow via large headers
