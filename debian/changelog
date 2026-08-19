@@ -1,3 +1,29 @@
+nginx (1.18.0-6ubuntu14.20) jammy-security; urgency=medium
+
+  * SECURITY REGRESSION: "no buffer space in script copy" (LP: #2164558)
+    - debian/patches/CVE-2026-42533.patch: disabled, pending further
+      investigation.
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 19 Aug 2026 12:57:30 -0400
+
+nginx (1.18.0-6ubuntu14.19) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: DoS and possible code execution via map directive
+    - debian/patches/CVE-2026-42533.patch: Fix logic in auto/modules,
+      src/http/modules/ngx_http_fastcgi_module.c,
+      src/http/modules/ngx_http_grpc_module.c,
+      src/http/modules/ngx_http_index_module.c,
+      src/http/modules/ngx_http_proxy_module.c,
+      src/http/modules/ngx_http_rewrite_module.c,
+      src/http/modules/ngx_http_scgi_module.c,
+      src/http/modules/ngx_http_try_files_module.c,
+      src/http/modules/ngx_http_uwsgi_module.c, src/http/ngx_http_script.c,
+      src/http/ngx_http_script.h, src/stream/ngx_stream_script.c,
+      src/stream/ngx_stream_script.h.
+    - CVE-2026-42533
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 28 Jul 2026 13:56:10 -0400
+
 nginx (1.18.0-6ubuntu14.18) jammy-security; urgency=medium
 
   * SECURITY REGRESSION: Security fix may break ABI (LP: #2161362)
